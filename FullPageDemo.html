@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>fullPage.js - My Demo</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage plugin by Alvaro Trigo. Pure javascript version of full screen slider." />
+    <meta name="keywords" content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple,pure,javascript,slider,hijacking" />
+    <meta name="Resource-type" content="Document" />
+    <link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
+    <style>
+    /* Reset CSS
+		 * --------------------------------------- */
+    
+    body,
+    div,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    pre,
+    form,
+    fieldset,
+    input,
+    textarea,
+    p,
+    blockquote,
+    th,
+    td {
+        padding: 0;
+        margin: 0;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    table {
+        border-spacing: 0;
+    }
+    
+    fieldset,
+    img {
+        border: 0;
+    }
+    
+    address,
+    caption,
+    cite,
+    code,
+    dfn,
+    em,
+    strong,
+    th,
+    var {
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    strong {
+        font-weight: bold;
+    }
+    
+    ol,
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    caption,
+    th {
+        text-align: left;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: normal;
+        font-size: 100%;
+        margin: 0;
+        padding: 0;
+        color: #444;
+    }
+    
+    q:before,
+    q:after {
+        content: '';
+    }
+    
+    abbr,
+    acronym {
+        border: 0;
+    }
+    /* Custom CSS
+		 * --------------------------------------- */
+    
+    body {
+        font-family: arial, helvetica;
+        color: #F2F2F2;
+    }
+    
+    h1 {
+        font-size: 6em;
+    }
+    
+    p {
+        font-size: 2em;
+    }
+    
+    .content {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+    /* Section 1
+		 * --------------------------------------- */
+    
+    #section0 {
+        background-color: #545454;
+        opacity:0.9;
+        filter:alpha(opacity=90);
+    }
+    
+    #section0 h1 {
+        color: #fff;
+    }
+    
+    #section0 p {
+        color: #fff;
+        opacity: 0.8;
+        filter:alpha(opacity=80);
+    }
+    /* Section 2
+		 * --------------------------------------- */
+    
+    #section1 {
+        background-color: #545454;
+        opacity: 0.9;
+        filter:alpha(opacity=90);
+    }
+    
+    #section1 h1 {
+        color: #fff;
+    }
+    
+    #section1 p {
+        color: #fff;
+        opacity: 0.8;
+        filter:alpha(opacity=80);
+    }
+    /* Section 3
+		 * --------------------------------------- */
+    
+    
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="section " id="section0">
+            <div class="content">
+                <h1>2016第一季度值得收藏的好剧</h1>
+                <p>看一部少一部</p>
+            </div>
+        </div>
+        <div class="section" id="section1">
+            <div class="slide" id="slide1">
+                <div class="content">
+                    <h1>请回答1988</h1>
+                    <p>
+                        时光的琥珀!!
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="slide" id="slide2">
+                <div class="content">
+                    <h1>Slides too!</h1>
+                </div>
+            </div>
+            <div class="slide" id="slide2">
+                <div class="content">
+                    <h1>More slides!</h1>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="section" id="section2">
+            <div class="slide" id="slide1">
+                <div class="content">
+                    <h1>奶酪陷阱</h1>
+                    <p></p>
+                </div>
+            </div>
+            <div class="slide" id="slide2">
+                <div class="content">
+                    <h1>穿搭典范</h1>
+                    <p></p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <script type="text/javascript" src="javascript.fullPage.js"></script>
+    <script type="text/javascript">
+    fullpage.initialize('#fullpage', {
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+        menu: '#menu',
+        css3: true
+    });
+    </script>
+</body>
+
+</html>
