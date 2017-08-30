@@ -13,7 +13,6 @@ function date(){
     dt.getMinutes();
     dt.getSeconds();
 }
-date();
 
 /**
  * @description 
@@ -62,8 +61,6 @@ function array(){
     console.log(arr3);//[2,3]
 
 }
-array();
-
 
 /**
  * @description 对象
@@ -81,6 +78,7 @@ function obj(){
         }
     }
 }
+
 //以下是具体例子
 /**
  * @description 返回2017-08-30格式的日期
@@ -105,5 +103,26 @@ formatDate(dt);
  * @author xuhuitao
  */
 function foreachArrOrObj(obj,fn){
-
+    var key;
+    if(obj instanceof Array){
+        obj.forEach(function(item,index){
+            fn(item,index)
+        })
+    }else{
+        for(var key in obj){
+            fn(key,obj[key])
+        }
+    }
 }
+var arr=[1,2,3];
+foreachArrOrObj(arr,function(item,index){
+    console.log(index,item)
+})
+var obj={
+    "name":"kajima",
+    "age":"8",
+    "sex":"female"
+}
+foreachArrOrObj(obj,function(key,value){
+    console.log(key,value)
+})
