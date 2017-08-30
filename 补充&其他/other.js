@@ -24,7 +24,8 @@ date();
  * sort 排序
  * map 对元素重新组装 生成新数组
  * filter 过滤
- * 
+ * 以上这些数组方法是es5新增 如果要兼容ie低版本 请扩充原型方法 
+ * 扩充数组原型方法：http://www.zhangxinxu.com/wordpress/2013/04/es5%E6%96%B0%E5%A2%9E%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/
  * @author xuhuitao
  */
 function array(){
@@ -80,7 +81,7 @@ function obj(){
         }
     }
 }
-
+//以下是具体例子
 /**
  * @description 返回2017-08-30格式的日期
  * @author xuhuitao
@@ -98,3 +99,11 @@ function formatDate(dt){
 }
 var dt=new Date();
 formatDate(dt);
+
+/**
+ * @description 写一个通用方法来遍历对象或者数组
+ * @author xuhuitao
+ */
+function foreachArrOrObj(obj,fn){
+
+}
