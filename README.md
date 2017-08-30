@@ -1,4 +1,4 @@
-# JSBasicSyntax
+# JS Basic Syntax
 js 基础知识 疑难点 整理知识点
 ## typeof和instanceof区别
 1. typeof只能判断变量和函数，判断数组和对象都会返回object，另外typeof null结果是object（boolean number string undefined function object）
