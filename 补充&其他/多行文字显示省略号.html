@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多行文字显示。。。</title>
+    <style type="text/css">
+        p {
+            position:relative;
+            line-height:1.4em;
+            /* 2 times the line-height to show 2 lines */
+            height:2.8em;
+            overflow:hidden;
+        }
+        p::after {
+            content:"...";
+            font-weight:bold;
+            position:absolute;
+            bottom:0;
+            right:0;
+            padding:0 20px 1px 45px;
+            background:url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
+        }
+
+    </style>
+</head>
+<body>
+    <p>换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题换成中文为什么会有问题</p>
+        <!-- <p>WebKit Browsers will clamp the number of lines in this paragraph to 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+        <!-- <p>为了兼容ie，如果使用webkit内核的浏览器只需要用这三个标签，配合起来使用就可以：overflow : hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;如果要兼容ie8，请把::after替换成:after。::after/::before是css3中的，为了和:hover等伪类区分开来。如果还需要吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧吧</p> -->
+</body>
+</html>
