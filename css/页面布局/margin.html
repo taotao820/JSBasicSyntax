@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="margin">
+        <style>
+            .main{
+                float:left;
+                width: 100%;
+            }
+            .main-content{
+                background: #de2;
+                margin:0 200px;
+                height: 500px;
+            }
+            .left{
+                float: left;
+                margin-left: -100%;
+                width: 180px;
+                height: 300px;
+                background: #d8d8d8;
+
+            }
+            .right{
+                float: left;
+                background: #666;
+                width: 180px;
+                margin-left: -180px;
+                height: 300px;
+            }
+        </style>
+        <article class="layout-container">
+            <div class="main">
+                <div class="main-content">
+                    <br>
+                    <h2>负边距在让元素产生偏移时和position: relative有什么区别?</h2>
+                    <p>1.position:relative 本身还处在文档流中，对其他元素没有影响</p>
+                    <p>2.负margin方法使元素位置偏移，使元素在文档流中的位置发生了改变，其后的元素受其影响。</p>
+                    <br>
+                    <h2>使用负 margin 形成三栏布局有什么条件?</h2>
+                    <p>使用负margin为了是main元素提前，对搜索进行优化</p>
+                    <p>处于前面的main元素也必须为浮动元素</p>
+                    <p>左边侧栏的margin-left设置为-100%</p>
+                    <p>右侧栏的margin-left值为-本身宽度</p>
+                    <p>中间自适应，可以再建一个块元素，margin出侧边距</p>
+                </div>
+            </div>
+            <div class="left">我是左侧栏目</div>
+            <div class="right">我是右侧栏目</div>
+            
+        </article>
+    </section>
+    <!--margin负值 布局原理-->
+</body>
+</html>
