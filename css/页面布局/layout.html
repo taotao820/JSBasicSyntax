@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+     html *{
+         padding:0;
+         margin:0;
+     }
+     .layout{
+         margin-top: 20px;
+     }
+     .layout article div{
+         min-height: 100px;
+     }
+    </style>
+</head>
+<body>
+    <section class="layout float">
+        <style media="screen">
+            .layout.float .left{
+                float:left;
+                width: 200px;
+                background: #666;
+            }
+            .layout.float .right{
+                float:right;
+                width: 250px;
+                background: #000;
+            }
+            .layout.float .center{
+                background: #d8d8d8;
+            }
+        </style>
+        <article class="left-right-center">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="center">
+                <h1>浮动解决方案</h1>
+                1、这是三栏布局中间部分
+                <p>高度不能自适应</p>
+                <p>高度不能自适应</p>
+                <p>高度不能自适应</p>
+                <p>高度不能自适应</p>
+                <p>高度不能自适应</p>
+                <p>高度不能自适应</p>
+                <p>高度不能自适应</p>
+                <p>高度不能自适应</p>
+            </div>
+        </article>
+    </section>
+    <section class="layout absolute">
+        <style>
+            .layout.absolute .left-center-right>div{
+                position: absolute;
+            }
+            .layout.absolute article div.left{
+                width: 200px;
+                background: #eee;
+                left: 0;
+            }
+            .layout.absolute article div.center{
+                background: #d8d8d8;
+                left: 200px;
+                right: 250px;
+            }
+            .layout.absolute article div.right{
+                right: 0px;
+                width: 250px;
+                background: #000;
+            }
+        </style>
+        <article class="left-center-right">
+            <div class="left"></div>
+            <div class="center">
+                <h2>绝对定位</h2>
+                1、这是三栏布局中间部分
+                <p>高度不能自适应</p>
+                <p>高度不能自适应</p>
+                <p>高度不能自适应</p>
+                <p>高度不能自适应</p>
+                <p>高度不能自适应</p>
+                <p>高度不能自适应</p>
+                <p>高度不能自适应</p>
+                <p>高度不能自适应</p>
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>
+
+    <section class="layout flexbox">
+        <style>
+            .layout.flexbox{
+                margin-top: 160px;
+            }
+            .layout.flexbox .left-center-right{
+                display: flex;
+            }
+            .layout.flexbox article div.left{
+                width: 200px;
+                background: #eee;
+            }
+            .layout.flexbox article div.center{
+                flex: 1;
+                background: #d8d8d8;
+            }
+            .layout.flexbox article div.right{
+                width: 250px;
+                background: #000;
+            }
+        </style>
+        <article class="left-center-right">
+            <div class="left"></div>
+            <div class="center">
+                <h2>flex解决方案</h2>
+                1、这是三栏布局中间部分
+                <p>高度能自适应</p>
+                <p>高度能自适应</p>
+                <p>高度能自适应</p>
+                <p>高度能自适应</p>
+                <p>高度能自适应</p>
+                <p>高度能自适应</p>
+                <p>高度能自适应</p>
+                <p>高度能自适应</p>
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>
+    <!-- 第四种方法 给父容器的display设置为display:table  给每个div设置 display:table-cell-->
+
+    <section class="layout grid">
+        <style>
+            .layout.grid .left-center-right{
+                display: grid;
+                width: 100%;
+                grid-template-rows:100px;
+                grid-template-columns:200px auto 250px;
+            }
+            .layout.grid article div.left{
+                background: #eee;
+            }
+            .layout.grid article div.center{
+                background: #d8d8d8;
+            }
+            .layout.grid article div.right{
+                background: #000;
+            }
+        </style>
+        <article class="left-center-right">
+                <div class="left"></div>
+                <div class="center">
+                    <h2>网格布局解决方案</h2>
+                    1、这是三栏布局中间部分
+                    <p>高度不能自适应</p>
+                    <p>高度不能自适应</p>
+                    <p>高度不能自适应</p>
+                    <p>高度不能自适应</p>
+                    <p>高度不能自适应</p>
+                    <p>高度不能自适应</p>
+                    <p>高度不能自适应</p>
+                    <p>高度不能自适应</p>
+                </div>
+                <div class="right"></div>
+        </article>
+    </section>
+    <!--总结 以上五种中1、高度自适应：只有flex和table布局可以做到；2、浏览器兼容性 浮动、绝对定位、table可以兼容ie8 其余则不行，flex需要ie10及以上，gridIE都不兼容-->
+    <!--margin负值法-->
+
+</body>
+</html>

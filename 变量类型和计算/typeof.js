@@ -1,4 +1,10 @@
+
+/**
+ * @description 
+ * @author xuhuitao
+ */
 function typeOfVar(){
+
     typeof null;//"object"
 
     typeof undefined;//"undefined"
@@ -17,4 +23,5 @@ function typeOfVar(){
     
     typeof unknownVariable;//'undefined'
 }
+
 typeOfVar();
